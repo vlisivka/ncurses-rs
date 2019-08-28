@@ -56,7 +56,8 @@ fn main() {
         println!("cargo:rustc-flags={}", x);
     }
 
-    check_chtype_size(&ncurses_lib);
+    // Commented out as workaround for https://github.com/jeaye/ncurses-rs/issues/184
+    //check_chtype_size(&ncurses_lib);
 }
 
 fn check_chtype_size(ncurses_lib: &Option<Library>) {
